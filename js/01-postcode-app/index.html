@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우편번호 검색</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>주소 검색</h1>
+      <div class="address-form">
+        <div class="postcode-group">
+          <div class="input-wrapper">
+            <label for="postcode">우편번호</label>
+            <div class="input-with-button">
+              <input
+                type="text"
+                id="postcode"
+                placeholder="우편번호"
+                readonly
+              />
+              <button onclick="execDaumPostcode()" class="search-button">
+                <span>검색</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="address">기본주소</label>
+          <input type="text" id="address" placeholder="기본주소" readonly />
+        </div>
+
+        <div class="input-group">
+          <label for="detailAddress">상세주소</label>
+          <input
+            type="text"
+            id="detailAddress"
+            placeholder="상세주소를 입력해주세요"
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="extraAddress">참고항목</label>
+          <textarea
+            id="extraAddress"
+            placeholder="참고항목"
+            readonly
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Daum 우편번호 서비스 -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

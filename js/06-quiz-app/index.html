@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>퀴즈 앱</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>JavaScript 퀴즈</h1>
+        <div class="progress">
+          <div class="progress-text">
+            <span id="currentQuestion">1</span>/<span id="totalQuestions"
+              >5</span
+            >
+          </div>
+          <div class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+      </header>
+
+      <main id="quizContainer">
+        <div class="quiz-content">
+          <div class="score-display" id="scoreDisplay">
+            점수: <span id="score">0</span>점
+          </div>
+
+          <div class="question-container">
+            <h2 id="question">질문이 여기에 표시됩니다.</h2>
+            <div id="options" class="options">
+              <!-- 옵션들이 여기에 동적으로 추가됩니다 -->
+            </div>
+          </div>
+
+          <div class="feedback" id="feedback">
+            <!-- 피드백 메시지가 여기에 표시됩니다 -->
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="nextBtn" class="btn" disabled>다음 문제</button>
+        </div>
+      </main>
+
+      <div id="results" class="results" style="display: none">
+        <h2>퀴즈 결과</h2>
+        <div class="final-score">
+          최종 점수: <span id="finalScore">0</span>점
+        </div>
+        <div class="feedback-message" id="finalFeedback">
+          <!-- 최종 피드백 메시지가 여기에 표시됩니다 -->
+        </div>
+        <div class="controls">
+          <button id="restartBtn" class="btn">다시 시작</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

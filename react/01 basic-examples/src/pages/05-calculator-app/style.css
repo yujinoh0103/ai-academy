@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+.calculator {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.display {
+  background: #f8f9fa;
+  padding: 20px;
+  text-align: right;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: #6c757d;
+  font-size: 1.5rem;
+  min-height: 30px;
+}
+
+.current-operand {
+  color: #212529;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #e9ecef;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 25px;
+  font-size: 1.4rem;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #f8f9fa;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.operator {
+  background: #f8f9fa;
+  color: #0d6efd;
+}
+
+.operator[data-action="equals"] {
+  background: #0d6efd;
+  color: white;
+  grid-row: span 1;
+}
+
+.operator[data-action="clear"],
+.operator[data-action="delete"] {
+  background: #dc3545;
+  color: white;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .calculator {
+    width: 95%;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  .display {
+    height: 100px;
+    padding: 15px;
+  }
+
+  .previous-operand {
+    font-size: 1.2rem;
+  }
+
+  .current-operand {
+    font-size: 2rem;
+  }
+}

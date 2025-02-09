@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 메모장</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>웹 메모장</h1>
+        <div class="header-buttons">
+          <button id="newNoteBtn" class="btn primary">새 메모</button>
+          <button id="deleteNoteBtn" class="btn danger">삭제</button>
+        </div>
+      </header>
+
+      <div class="tabs" id="tabList">
+        <!-- 탭은 JavaScript로 동적 생성됩니다 -->
+      </div>
+
+      <div class="editor">
+        <div class="editor-header">
+          <input
+            type="text"
+            id="noteTitle"
+            placeholder="메모 제목"
+            class="title-input"
+          />
+          <span id="lastSaved" class="last-saved">자동 저장됨</span>
+        </div>
+        <textarea
+          id="noteContent"
+          placeholder="여기에 메모를 입력하세요..."
+          class="content-input"
+        ></textarea>
+      </div>
+
+      <div class="status-bar">
+        <span id="charCount">0자</span>
+        <span id="saveStatus">저장됨</span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

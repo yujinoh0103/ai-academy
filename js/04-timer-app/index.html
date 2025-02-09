@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머 & 스톱워치 앱</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="timer">타이머</button>
+        <button class="tab-btn" data-tab="stopwatch">스톱워치</button>
+      </div>
+
+      <div class="tab-content active" id="timer">
+        <div class="display">
+          <span id="timer-minutes">00</span>:
+          <span id="timer-seconds">00</span>
+        </div>
+        <div class="controls">
+          <input
+            type="number"
+            id="set-minutes"
+            placeholder="분"
+            min="0"
+            max="59"
+          />
+          <input
+            type="number"
+            id="set-seconds"
+            placeholder="초"
+            min="0"
+            max="59"
+          />
+          <button id="timer-start">시작</button>
+          <button id="timer-stop">정지</button>
+          <button id="timer-reset">리셋</button>
+        </div>
+      </div>
+
+      <div class="tab-content" id="stopwatch">
+        <div class="display">
+          <span id="stopwatch-minutes">00</span>:
+          <span id="stopwatch-seconds">00</span>:
+          <span id="stopwatch-milliseconds">00</span>
+        </div>
+        <div class="controls">
+          <button id="stopwatch-start">시작</button>
+          <button id="stopwatch-stop">정지</button>
+          <button id="stopwatch-reset">리셋</button>
+          <button id="stopwatch-lap">랩</button>
+        </div>
+        <div class="lap-times">
+          <h3>랩 타임</h3>
+          <ul id="lap-list"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

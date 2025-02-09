@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #1a1a1a, #2c3e50);
+  color: #ffffff;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #a8a8a8;
+}
+
+.time {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.meridiem {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  font-weight: 700;
+}
+
+/* 시간대별 색상 변경 */
+.morning {
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+}
+
+.afternoon {
+  background: linear-gradient(45deg, #3a506b, #5bc0be);
+}
+
+.evening {
+  background: linear-gradient(45deg, #1c2541, #3a506b);
+}
+
+.night {
+  background: linear-gradient(45deg, #0b132b, #1c2541);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .time {
+    font-size: 3rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  .meridiem {
+    font-size: 1.2rem;
+  }
+}
