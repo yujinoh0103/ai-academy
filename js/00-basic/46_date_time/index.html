@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날짜와 시간</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .clock {
+        font-size: 2em;
+        margin: 20px 0;
+      }
+      .date-result {
+        margin: 10px 0;
+        padding: 5px;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>날짜와 시간</h1>
+
+    <div class="container">
+      <h2>현재 시간</h2>
+      <div id="clock" class="clock"></div>
+    </div>
+
+    <div class="container">
+      <h2>날짜 계산</h2>
+      <input type="date" id="dateInput">
+      <button onclick="calculateDates()">날짜 계산</button>
+      <div id="dateResults"></div>
+    </div>
+
+    <div class="container">
+      <h2>타이머</h2>
+      <input type="number" id="minutes" placeholder="분" min="0" max="60">
+      <input type="number" id="seconds" placeholder="초" min="0" max="59">
+      <button onclick="startTimer()">시작</button>
+      <button onclick="stopTimer()">정지</button>
+      <div id="timer" class="clock"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

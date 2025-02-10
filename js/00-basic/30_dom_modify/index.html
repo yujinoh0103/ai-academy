@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 요소 수정</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .red-text {
+        color: red;
+      }
+      .container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>DOM 요소 수정</h1>
+
+    <div class="container">
+      <p id="text">이 텍스트를 수정해보세요.</p>
+      <button onclick="changeText()">텍스트 변경</button>
+    </div>
+
+    <div class="container">
+      <p id="style-test">스타일을 변경해보세요.</p>
+      <button onclick="changeStyle()">스타일 변경</button>
+    </div>
+
+    <div class="container">
+      <p id="class-test">클래스를 추가/제거해보세요.</p>
+      <button onclick="toggleClass()">클래스 토글</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

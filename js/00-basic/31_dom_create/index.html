@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 요소 생성</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .new-element {
+        background-color: #e0ffe0;
+        padding: 5px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>DOM 요소 생성</h1>
+
+    <div class="container">
+      <div id="element-list">
+        <!-- 여기에 새로운 요소들이 추가됩니다 -->
+      </div>
+      <button onclick="createElement()">요소 생성</button>
+      <button onclick="cloneElement()">요소 복제</button>
+    </div>
+
+    <div class="container">
+      <div id="template-container">
+        <template id="element-template">
+          <div class="new-element">
+            <h3>새로운 요소</h3>
+            <p>이것은 템플릿에서 생성된 요소입니다.</p>
+          </div>
+        </template>
+      </div>
+      <button onclick="useTemplate()">템플릿 사용</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

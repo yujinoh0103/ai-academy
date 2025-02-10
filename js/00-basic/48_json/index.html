@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON 다루기</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .form-group {
+        margin: 10px 0;
+      }
+      .result {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        white-space: pre-wrap;
+      }
+      .error {
+        color: red;
+      }
+      .success {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>JSON 다루기</h1>
+
+    <div class="container">
+      <h2>JSON 파싱 및 생성</h2>
+      <div class="form-group">
+        <textarea id="jsonInput" rows="6" cols="50" placeholder="JSON 문자열 입력"></textarea>
+        <br>
+        <button onclick="parseJson()">파싱</button>
+        <button onclick="loadSampleJson()">샘플 데이터 로드</button>
+        <div id="parseResult" class="result"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>JSON 데이터 수정</h2>
+      <div class="form-group">
+        <input type="text" id="propertyPath" placeholder="속성 경로 (예: user.name)">
+        <input type="text" id="propertyValue" placeholder="새로운 값">
+        <button onclick="modifyJson()">수정</button>
+        <div id="modifyResult" class="result"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>JSON 데이터 검색</h2>
+      <div class="form-group">
+        <input type="text" id="searchKey" placeholder="검색할 키">
+        <input type="text" id="searchValue" placeholder="검색할 값">
+        <button onclick="searchJson()">검색</button>
+        <div id="searchResult" class="result"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 요소 선택</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>DOM 요소 선택</h1>
+
+    <div id="main">
+      <p>첫 번째 문단입니다.</p>
+      <p class="highlight">두 번째 문단입니다.</p>
+      <p>세 번째 문단입니다.</p>
+    </div>
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+
+    <button onclick="selectElements()">요소 선택하기</button>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

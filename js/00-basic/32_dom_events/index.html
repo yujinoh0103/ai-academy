@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 이벤트</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      .event-box {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>DOM 이벤트</h1>
+
+    <div class="container">
+      <div id="click-box" class="event-box">
+        클릭하세요
+      </div>
+      <div id="event-log"></div>
+    </div>
+
+    <div class="container">
+      <input type="text" id="input-field" placeholder="텍스트를 입력하세요">
+      <p id="input-display"></p>
+    </div>
+
+    <div class="container">
+      <div id="parent-box" class="event-box">
+        부모 요소
+        <div id="child-box" class="event-box" style="width: 100px; height: 50px; background-color: pink;">
+          자식 요소
+        </div>
+      </div>
+      <div id="bubble-log"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

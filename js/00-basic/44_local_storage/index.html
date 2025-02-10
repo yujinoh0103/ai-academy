@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로컬 스토리지</title>
+    <style>
+      .container {
+        margin: 20px;
+        padding: 10px;
+      }
+      .note {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="history.back()">뒤로 가기</button>
+    <h1>로컬 스토리지</h1>
+
+    <div class="container">
+      <h2>메모장</h2>
+      <textarea id="noteInput" rows="4" cols="50"></textarea>
+      <br>
+      <button onclick="saveNote()">저장</button>
+      <button onclick="loadNote()">불러오기</button>
+      <button onclick="clearNote()">삭제</button>
+      <div id="savedNote" class="note"></div>
+    </div>
+
+    <div class="container">
+      <h2>설정</h2>
+      <label>
+        <input type="checkbox" id="darkMode" onchange="toggleTheme()">
+        다크 모드
+      </label>
+      <br>
+      <label>
+        글자 크기:
+        <select id="fontSize" onchange="changeFontSize()">
+          <option value="12">작게</option>
+          <option value="16">보통</option>
+          <option value="20">크게</option>
+        </select>
+      </label>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
