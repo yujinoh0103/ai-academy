@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #1a1a1a;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-with-button {
+  display: flex;
+  gap: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+textarea {
+  height: 200px;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+textarea:read-only,
+input:read-only {
+  background-color: #fafafa;
+  color: #666;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #999;
+}
+
+.search-button {
+  padding: 12px 24px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #357abd;
+  transform: translateY(-1px);
+}
+
+.search-button:active {
+  transform: translateY(0);
+}
+
+.postcode-group {
+  margin-bottom: 8px;
+}
+
+#postcode {
+  width: 140px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .input-with-button {
+    flex-direction: column;
+  }
+
+  #postcode {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
