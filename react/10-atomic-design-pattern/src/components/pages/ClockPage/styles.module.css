@@ -1,0 +1,24 @@
+.clockPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #1a1a1a, #2c3e50);
+  color: #ffffff;
+}
+
+:global(.morning) {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+:global(.afternoon) {
+  background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+:global(.evening) {
+  background: linear-gradient(45deg, #614385, #516395);
+}
+
+:global(.night) {
+  background: linear-gradient(45deg, #16222a, #3a6073);
+}
