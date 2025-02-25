@@ -58,7 +58,7 @@ export const ClickCounter: React.FC = () => {
         <CountDisplay count={count} />
         <MessageDisplay message={message} />
       </div>
-      <div className={styles.buttons}>
+      <div className={styles.buttons} onClick={() => console.log("clicked")}>
         <Button onClick={updateCount} variant="primary">
           클릭
         </Button>

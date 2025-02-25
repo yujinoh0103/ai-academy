@@ -1,14 +1,8 @@
-import React from "react";
-import { CounterPage } from "./components/pages/CounterPage";
-import { ClockPage } from "./components/pages/ClockPage";
+import { PostPage } from "./components/pages/PostPage";
+import { TodoPage } from "./components/pages/TodoPage";
 
 function App() {
-  return (
-    <div>
-      <CounterPage />
-      {/* <ClockPage /> */}
-    </div>
-  );
+  return window.location.pathname === "/post" ? <PostPage /> : <TodoPage />;
 }
 
 export default App;

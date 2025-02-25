@@ -6,7 +6,7 @@ interface MainTemplateProps {
   children: React.ReactNode;
 }
 
-export const MainTemplate: React.FC<MainTemplateProps> = ({ title, children }) => {
+export const MainTemplate = ({ title, children }: MainTemplateProps) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
