@@ -6,11 +6,12 @@ import { TodoTemplate } from "../../templates/TodoTemplate";
 import { NewCounter } from "../../organisms/NewCounter";
 import { useTodo } from "../../../hooks/useTodo";
 import { useChangeTitle } from "../../../hooks/useChangeTitle";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 
 export function TodoPage() {
   const { todos, addTodo, deleteTodo } = useTodo();
-
   useChangeTitle(`Todo Page: ${todos.length}`);
+  useWindowSize();
 
   return (
     <TodoTemplate>
