@@ -1,27 +1,29 @@
 import { useState } from "react";
 import { Button } from "../../atoms/Button";
 import { Input } from "../../atoms/Input";
+import { useForm } from "../../../hooks/useForm";
+
+interface FormData {
+  name: string;
+}
 
 interface InputFormProps {
-  onSubmit: (name: string) => void;
+  onSubmit: (data: string) => void;
 }
 
 export function InputForm({ onSubmit }: InputFormProps) {
-  const [name, setName] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(name);
-    setName("");
-  };
+  const { data, handleChange, handleSubmit } = useForm<FormData>({
+    initialValues: {
+      name: "",
+    },
+    onSubmit: (data) => {
+      onSubmit(data.name);
+    },
+  });
 
   return (
     <form onSubmit={handleSubmit}>
-      <Input
-        name="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+      <Input name="name" value={data.name} onChange={handleChange} />
       <Button type="submit" variant="primary">
         Submit
       </Button>
