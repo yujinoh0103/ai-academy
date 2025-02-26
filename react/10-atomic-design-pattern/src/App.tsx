@@ -1,8 +1,5 @@
-import { PostPage } from "./components/pages/PostPage";
-import { TodoPage } from "./components/pages/TodoPage";
-
 function App() {
-  return window.location.pathname === "/post" ? <PostPage /> : <TodoPage />;
+  return <div>App.tsx</div>;
 }
 
 export default App;

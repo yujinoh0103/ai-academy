@@ -1,4 +1,5 @@
 import { useFetch } from "../../../hooks/useFetch";
+import { NavLink, Link } from "react-router";
 
 interface Post {
   userId: number;
@@ -7,7 +8,7 @@ interface Post {
   body: string;
 }
 
-export function PostPage() {
+export function PostListPage() {
   const { data, loading, error } = useFetch<Post[]>(
     "https://jsonplaceholder.typicode.com/posts"
   );
@@ -20,7 +21,7 @@ export function PostPage() {
         <div>
           {data.map((post) => (
             <div key={post.id} style={{ padding: "10px" }}>
-              {post.title}
+              <Link to={`/app/post/${post.id}`}>{post.title}</Link>
             </div>
           ))}
         </div>
